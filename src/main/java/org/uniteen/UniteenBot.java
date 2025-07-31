@@ -41,7 +41,7 @@ public class UniteenBot extends TelegramLongPollingBot {
 
             if (waitingForCourseInput.getOrDefault(chatId, false) && msg.hasText()) {
                 forwardToAdmin(chatId, "Kursga yozilish so'rovi: " + msg.getText(), msg.getFrom());
-                sendMessage(chatId, "✅ Kursga yozilish so'rovingiz qabul qilindi.");
+                sendMessage(chatId, "✅ Kursga yozilish so'rovingiz qabul qilindi, Tez orada siz bilan bog'lanishadi.");
                 waitingForCourseInput.remove(chatId);
                 return;
             }
@@ -59,7 +59,7 @@ public class UniteenBot extends TelegramLongPollingBot {
                         break;
                     case "Information":
                         sendMessage(chatId, "📌Uniteen Academy o’quv markazi\r\n" + //
-                                                        "rasmiy boti ✅\r\n" + //
+                                                        "rasmiy kanali ✅\r\n" + //
                                                         "🔵 General English\r\n" + //
                                                         "🔵 MATEMATIKA\r\n" + //
                                                         "🔵 Multi Level \r\n" + //
